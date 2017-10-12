@@ -8,7 +8,7 @@ directory_key_main = []
 def directory_call():
     lines1 = glob.glob("diag-insights-content/content/**/**/**")
     for each_line in lines1:
-        find = re.search(r'\.*\/.*\/.*', each_line)
+        find = re.search(r'\.*\/.*\/(.*)', each_line)
         directory_key.append(find.group())
     
     for var2 in directory_key:
@@ -17,7 +17,7 @@ def directory_call():
 
     lines2 = glob.glob("diag-insights-content/content/**/satellite/**/**")
     for each_line in lines2:
-        find = re.search(r'\.*\/.*\/.*\/.*', each_line)
+        find = re.search(r'\.*\/.*\/.*\/(.*)', each_line)
         directory_key_main.append(find.group())
    
     return directory_key_main
