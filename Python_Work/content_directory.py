@@ -10,6 +10,7 @@ def directory_call():
     for each_line in lines1:
         find = re.search(r'\.*\/.*\/(.*)', each_line)
         directory_key.append(find.group(1))
+        print find
     
     for var2 in directory_key:
         if var2.isupper():
@@ -19,5 +20,5 @@ def directory_call():
     for each_line in lines2:
         find = re.search(r'\.*\/.*\/.*\/(.*)', each_line)
         directory_key_main.append(find.group(1))
-   
+        print find
     return directory_key_main
