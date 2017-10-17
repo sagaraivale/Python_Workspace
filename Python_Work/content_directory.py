@@ -19,5 +19,4 @@ def directory_call():
     for each_line in lines2:
         find = re.search(r'\.*\/.*\/.*\/(.*)', each_line)
         directory_key_main.append(find.group())
-   
-    return directory_key_main
+   return directory_key_main
