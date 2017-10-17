@@ -16,7 +16,7 @@ def parameter_extraction():
         errorkey = re.findall(r'ERROR_KE.* = [\"\']([\w\s]+)[\'\"]', f.read())
         for Key in errorkey:
             list_of_errorkeys.append(Key)
-
+    print list_of_error_keys
     directory = content_directory.directory_call()
     for var1 in list_of_errorkeys:
         if var1 in directory:
